@@ -16,7 +16,7 @@ export class News extends Component {
 
     updateNews(){
       //var url = `https://newsapi.org/v2/everything?q=Apple&from=2022-11-16&sortBy=popularity&apiKey=0acfa1f0af8149c6aa4bb005a0537224&page=${this.state.page}&pageSize=100`;
-      var url = `https://newsapi.org/v2/top-headlines?category=${this.props.category}&country=${this.props.country}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+      var url = `http://newsapi.org/v2/top-headlines?category=${this.props.category}&country=${this.props.country}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
       console.log("URL" + url); 
       var req = new Request(url);
         this.setState({loading:true});
