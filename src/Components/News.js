@@ -50,13 +50,12 @@ export class News extends Component {
     };
     
   render() {
-    const {articles } = this.state.articles;
     return (
         <div className="container my-4">
             <h2>Daily News Reading</h2>
             {this.state.loading  && <Spinner/>}
             <div className="row">
-                {articles.map((element)=>{
+                {this.state.articles.map((element)=>{
                     return <div className="col-md-4" key={element.url}>
                         <NewsItem title={element.title?element.title.slice(0,44):""} desc={element.description?element.description.slice(0,88):""} 
                         imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt}
